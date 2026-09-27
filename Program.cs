@@ -1,22 +1,22 @@
 var topics = new TopicInfo[]
 {
-    new(1, "where", "Where", "WHERE", 3),
-    new(2, "select", "Select", "SELECT", 3),
-    new(3, "ordering", "Ordering", "ORDER", 3),
-    new(4, "any", "Any", "ANY", 4),
-    new(5, "all", "All", "ALL", 3),
-    new(6, "elements", "Element operators", "ELEMENT", 4),
-    new(7, "pagination", "Skip, Take, and Chunk", "PAGE", 3),
-    new(8, "select-many", "SelectMany", "MANY", 4),
-    new(9, "sets", "Set operators", "SET", 4),
-    new(10, "join", "Join", "JOIN", 3),
-    new(11, "group-join", "GroupJoin", "GJOIN", 4),
-    new(12, "group-by", "GroupBy", "GROUP", 4),
-    new(13, "aggregates", "Aggregates", "AGG", 4),
-    new(14, "to-lookup", "ToLookup", "CONVERT", 3),
-    new(15, "to-dictionary", "ToDictionary", "DICT", 4),
-    new(16, "execution", "Deferred vs immediate execution", "EXEC", 3),
-    new(17, "iqueryable", "IQueryable", "QUERY", 3)
+    new(1, "where", "Where", "WHERE", 10),
+    new(2, "select", "Select", "SELECT", 10),
+    new(3, "ordering", "Ordering", "ORDER", 10),
+    new(4, "any", "Any", "ANY", 10),
+    new(5, "all", "All", "ALL", 10),
+    new(6, "elements", "Element operators", "ELEMENT", 10),
+    new(7, "pagination", "Skip, Take, and Chunk", "PAGE", 10),
+    new(8, "select-many", "SelectMany", "MANY", 10),
+    new(9, "sets", "Set operators", "SET", 10),
+    new(10, "join", "Join", "JOIN", 10),
+    new(11, "group-join", "GroupJoin", "GJOIN", 10),
+    new(12, "group-by", "GroupBy", "GROUP", 10),
+    new(13, "aggregates", "Aggregates", "AGG", 10),
+    new(14, "to-lookup", "ToLookup", "CONVERT", 10),
+    new(15, "to-dictionary", "ToDictionary", "DICT", 10),
+    new(16, "execution", "Deferred vs immediate execution", "EXEC", 10),
+    new(17, "iqueryable", "IQueryable", "QUERY", 10)
 };
 
 if (args.Length == 0 || args[0] is "help" or "-h" or "--help")
@@ -83,7 +83,7 @@ static void PrintHelp()
     Console.WriteLine("  dotnet run -- topics");
     Console.WriteLine("  dotnet run -- list any");
     Console.WriteLine("  dotnet run -- show any 2");
-    Console.WriteLine("  dotnet test --filter FullyQualifiedName~Any_answers");
+    Console.WriteLine("  dotnet test --filter \"DisplayName~ANY-01\"");
 }
 
 internal sealed record TopicInfo(

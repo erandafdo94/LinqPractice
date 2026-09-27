@@ -1,6 +1,6 @@
 # LINQ Interview Practice
 
-This repository is organized by LINQ topic. Every topic has one question file with 3–4 interview exercises, editable practice methods in that same file, and one matching answer file with complete reference solutions.
+This repository is organized by LINQ topic. Every topic has exactly 10 interview exercises, editable practice methods in that same file, and one matching answer file with complete reference solutions.
 
 ```text
 Questions/AnyQuestions.cs   -> prompts plus methods where you write your code
@@ -30,7 +30,7 @@ Example workflow:
 1. Open `Questions/AnyQuestions.cs` and read `ANY-01`.
 2. The input collections are parameters on the method immediately below the question.
 3. Replace `throw new NotImplementedException()` with your LINQ query, without opening the answer folder.
-4. Run `dotnet test --filter "FullyQualifiedName=LinqPractice.Tests.TopicPracticeTests.Any_answers_are_correct"`.
+4. Run `dotnet test --filter "DisplayName~ANY-01"` to test only that question.
 5. Compare your query with the matching method in `Answers/AnyAnswers.cs`.
 6. Explain the time complexity and how the query would translate to SQL.
 
@@ -56,7 +56,13 @@ Example workflow:
 | 16 | Execution | deferred execution, materialization, snapshots |
 | 17 | `IQueryable` | provider-side composition and avoiding early enumeration |
 
-There are 59 questions in total. The order deliberately moves from basic in-memory LINQ to the areas interviewers commonly probe for deeper understanding: cardinality, empty sequences, left joins, grouped calculations, dictionary key uniqueness, deferred execution, and query-provider boundaries.
+There are 170 questions in total. Each topic follows the same progression:
+
+- Questions 01–03: **Simple** fundamentals.
+- Questions 04–07: **Medium** combinations and realistic reporting tasks.
+- Questions 08–10: **Hard** edge cases, multi-source queries, or execution behavior.
+
+The overall path moves from basic in-memory LINQ to the areas interviewers commonly probe for deeper understanding: cardinality, empty sequences, left joins, grouped calculations, dictionary key uniqueness, deferred execution, and query-provider boundaries.
 
 ## Folder structure
 
@@ -80,4 +86,4 @@ LinqPractice/
 - Keep database-bound work as `IQueryable`; avoid early `ToList` or `AsEnumerable`.
 - Prefer readable query composition over squeezing everything into one expression.
 
-Every practice method starts with `throw new NotImplementedException()`. The project builds immediately, but its practice tests fail until you implement the relevant methods. Run one topic at a time using the focused test command, then compare your work with the matching file under `Answers`.
+Every untouched practice method starts with `throw new NotImplementedException()`. The project builds immediately, while each practice test fails until you implement that specific method. Run one question with `dotnet test --filter "DisplayName~WHERE-01"`, or replace the ID with the question you are solving. The test suite discovers all 170 practice methods automatically and compares each result with its matching reference implementation under `Answers`.
