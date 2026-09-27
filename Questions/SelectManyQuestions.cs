@@ -2,7 +2,11 @@ namespace LinqPractice.Questions;
 
 public static class SelectManyQuestions
 {
-    // Write your LINQ answers below.
+    // PRACTICE WORKFLOW
+    // 1. Read one question and replace its NotImplementedException with your LINQ answer.
+    // 2. Run that question only: dotnet test --filter "FullyQualifiedName~.MANY_01"
+    // 3. Change 01 to the question number you are solving.
+    // INPUTS: The exact lists are in PracticeData.cs and are passed into each method below.
     // MANY-01 — Flatten orders into their lines
     // Difficulty: Simple
     // For each order, find its matching order items and flatten them into one result sequence.

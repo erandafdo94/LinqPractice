@@ -69,6 +69,7 @@ if (args[0].Equals("list", StringComparison.OrdinalIgnoreCase) ||
         }
 
         Console.WriteLine($"Question: {topic.Prefix}-{number:00}");
+        Console.WriteLine($"Test: dotnet test --filter \"FullyQualifiedName~.{topic.Prefix}_{number:00}\"");
     }
 
     return;
@@ -83,7 +84,8 @@ static void PrintHelp()
     Console.WriteLine("  dotnet run -- topics");
     Console.WriteLine("  dotnet run -- list any");
     Console.WriteLine("  dotnet run -- show any 2");
-    Console.WriteLine("  dotnet test --filter \"DisplayName~ANY-01\"");
+    Console.WriteLine("  dotnet test --filter \"FullyQualifiedName~.ANY_01\"");
+    Console.WriteLine("  dotnet test --filter \"Topic=Any\"");
 }
 
 internal sealed record TopicInfo(

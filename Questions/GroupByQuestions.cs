@@ -2,7 +2,11 @@ namespace LinqPractice.Questions;
 
 public static class GroupByQuestions
 {
-    // Write your LINQ answers below.
+    // PRACTICE WORKFLOW
+    // 1. Read one question and replace its NotImplementedException with your LINQ answer.
+    // 2. Run that question only: dotnet test --filter "FullyQualifiedName~.GROUP_01"
+    // 3. Change 01 to the question number you are solving.
+    // INPUTS: The exact lists are in PracticeData.cs and are passed into each method below.
 
     // GROUP-01 — Customer count by city
     // Difficulty: Simple

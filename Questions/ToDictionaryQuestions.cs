@@ -2,13 +2,17 @@ namespace LinqPractice.Questions;
 
 public static class ToDictionaryQuestions
 {
-    // Write your LINQ answers below.
+    // PRACTICE WORKFLOW
+    // 1. Read one question and replace its NotImplementedException with your LINQ answer.
+    // 2. Run that question only: dotnet test --filter "FullyQualifiedName~.DICT_01"
+    // 3. Change 01 to the question number you are solving.
+    // INPUTS: The exact lists are in PracticeData.cs and are passed into each method below.
     // DICT-01 — Product names keyed by ID
     // Difficulty: Simple
     // Convert `products` into a dictionary whose key is Product.Id and value is Product.Name.
     // ToDictionary should naturally throw if the input contains duplicate product IDs.
     public static IReadOnlyDictionary<int, string> ProductNamesById(IEnumerable<Product> products) =>
-        throw new NotImplementedException();
+        products.ToDictionary(key => key.Id, value => value.Name);
 
     // DICT-02 — Latest order status by customer
     // Difficulty: Simple

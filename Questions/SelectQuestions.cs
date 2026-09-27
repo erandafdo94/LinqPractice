@@ -2,7 +2,11 @@ namespace LinqPractice.Questions;
 
 public static class SelectQuestions
 {
-    // Write your LINQ answers below.
+    // PRACTICE WORKFLOW
+    // 1. Read one question and replace its NotImplementedException with your LINQ answer.
+    // 2. Run that question only: dotnet test --filter "FullyQualifiedName~.SELECT_01"
+    // 3. Change 01 to the question number you are solving.
+    // INPUTS: The exact lists are in PracticeData.cs and are passed into each method below.
     // SELECT-01 — Build a lightweight product catalogue
     // Difficulty: Simple
     // The UI does not need the complete Product object. Convert each product into a tuple

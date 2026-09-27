@@ -2,7 +2,11 @@ namespace LinqPractice.Questions;
 
 public static class ConversionQuestions
 {
-    // Write your LINQ answers below.
+    // PRACTICE WORKFLOW
+    // 1. Read one question and replace its NotImplementedException with your LINQ answer.
+    // 2. Run that question only: dotnet test --filter "FullyQualifiedName~.CONVERT_01"
+    // 3. Change 01 to the question number you are solving.
+    // INPUTS: The exact lists are in PracticeData.cs and are passed into each method below.
     // CONVERT-01 — Look up order IDs by status
     // Difficulty: Simple
     // Build an ILookup where each key is an order Status and each value is an order ID. Ensure

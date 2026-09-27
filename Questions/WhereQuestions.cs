@@ -2,7 +2,11 @@ namespace LinqPractice.Questions;
 
 public static class WhereQuestions
 {
-    // Write your LINQ answers below.
+    // PRACTICE WORKFLOW
+    // 1. Read one question and replace its NotImplementedException with your LINQ answer.
+    // 2. Run that question only: dotnet test --filter "FullyQualifiedName~.WHERE_01"
+    // 3. Change 01 to the question number you are solving.
+    // INPUTS: The exact lists are in PracticeData.cs and are passed into each method below.
     // WHERE-01 — Customers in one city
     // Difficulty: Simple
     // The sales team needs a mailing list for Auckland. From `customers`, keep only people
